@@ -54,9 +54,9 @@ if __name__== "__main__":
     data_transformation = DataTransformation()
     train_arr, test_arr,_= data_transformation.intiate_data_transformation(train_data, test_data)
     model_trainer = ModelTrainer()
-    r2_score = model_trainer.initiate_model_trainer(train_arr, test_arr)
+    r2_score, best_params = model_trainer.initiate_model_trainer(train_arr, test_arr)
     print(r2_score)
-    logging.info(f"R2_score of the selected model is {r2_score}")
+    logging.info(f"R2_score of the selected model is {r2_score} with best params - {best_params}")
 
     
 
